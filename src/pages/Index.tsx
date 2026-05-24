@@ -215,6 +215,12 @@ const Index = () => {
         <div className="container max-w-4xl">
           <FadeUp>
             <div className="flex flex-col md:flex-row items-center gap-12 bg-[#f5f5f7] rounded-3xl p-10">
+              <div className="flex flex-col md:flex-row items-center gap-8">
+              <img
+                src="/fixture-pricing-pro/headshot.png"
+                alt="Jack Wu"
+                className="w-24 h-24 rounded-2xl object-cover shadow-sm flex-shrink-0"
+              />
               <div className="flex-1 text-center md:text-left">
                 <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">About the Builder</p>
                 <h2 className="text-3xl font-bold text-[#1d1d1f] mb-4 tracking-tight">Jack Wu</h2>
@@ -231,6 +237,7 @@ const Index = () => {
                   </button>
                 </a>
               </div>
+            </div>
             </div>
           </FadeUp>
         </div>
