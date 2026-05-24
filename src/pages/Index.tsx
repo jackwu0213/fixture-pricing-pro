@@ -222,7 +222,7 @@ const Index = () => {
                   Product builder exploring how AI and structured thinking can make complex engineering workflows faster and more consistent. PricingPro is one experiment in that direction — turning a manual, expertise-dependent process into something any team can run.
                 </p>
                 <a
-                  href="https://jacktwu.github.io/jackwu/"
+                  href="https://jackwu0213.github.io/jackwu/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
