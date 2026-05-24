@@ -69,6 +69,17 @@ const Index = () => {
             </button>
           </a>
         </div>
+
+        {/* Hero Image */}
+        <div className="mt-16 max-w-4xl mx-auto">
+          <div className="rounded-3xl overflow-hidden shadow-2xl ring-1 ring-black/[0.06]">
+            <img
+              src="/fixture-pricing-pro/hero.png"
+              alt="Fixture Estimate Assistant showing cost breakdown and engineering hours"
+              className="w-full h-auto"
+            />
+          </div>
+        </div>
       </section>
 
       {/* Benefits */}
