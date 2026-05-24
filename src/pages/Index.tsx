@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
 import { Clock, BarChart3, DollarSign, FileText, Settings, CheckCircle } from "lucide-react";
 import Header from "@/components/Header";
 
@@ -45,69 +43,68 @@ const steps = [
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-background">
+    <div className="min-h-screen bg-white">
       <Header />
 
       {/* Hero */}
-      <section className="py-20 lg:py-28">
-        <div className="container max-w-4xl text-center">
-          <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl leading-tight">
-            Estimate jig and fixture projects faster with more consistency
-          </h1>
-          <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Stop relying on scattered spreadsheets and senior engineer guesswork. Get structured, repeatable estimates for engineering labor, lead time, and total project cost.
-          </p>
-          <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link to="/estimate">
-              <Button variant="hero" size="lg" className="text-base px-8 py-6">
-                Start an Estimate
-              </Button>
-            </Link>
-            <a href="#how-it-works">
-              <Button variant="hero-outline" size="lg" className="text-base px-8 py-6">
-                See How It Works
-              </Button>
-            </a>
-          </div>
+      <section className="py-28 lg:py-40 text-center px-6">
+        <p className="text-sm font-semibold text-primary uppercase tracking-widest mb-4">
+          Fixture &amp; Jig Estimating
+        </p>
+        <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold tracking-tight text-[#1d1d1f] leading-[1.05] max-w-4xl mx-auto">
+          Price smarter.<br />Quote faster.
+        </h1>
+        <p className="mt-6 text-xl text-[#6e6e73] max-w-2xl mx-auto leading-relaxed">
+          Stop relying on scattered spreadsheets and senior engineer guesswork. Get structured, repeatable estimates for engineering labor, lead time, and total project cost.
+        </p>
+        <div className="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
+          <Link to="/estimate">
+            <button className="rounded-full bg-primary text-white text-lg font-medium px-8 py-4 hover:bg-blue-700 transition-colors">
+              Start an Estimate
+            </button>
+          </Link>
+          <a href="#how-it-works">
+            <button className="rounded-full bg-[#f5f5f7] text-[#1d1d1f] text-lg font-medium px-8 py-4 hover:bg-gray-200 transition-colors">
+              See How It Works
+            </button>
+          </a>
         </div>
       </section>
 
       {/* Benefits */}
-      <section className="py-16 bg-surface">
-        <div className="container">
-          <h2 className="text-2xl font-semibold text-center text-foreground mb-12">
-            Why teams use Fixture Estimate Assistant
+      <section className="py-24 bg-[#f5f5f7]">
+        <div className="container max-w-6xl">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest text-center mb-4">Why PricingPro</p>
+          <h2 className="text-4xl font-bold text-center text-[#1d1d1f] mb-16 tracking-tight">
+            Built for tooling teams who need to move fast.
           </h2>
-          <div className="grid md:grid-cols-3 gap-6 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-8">
             {benefits.map((b) => (
-              <Card key={b.title} className="bg-card border shadow-sm hover:shadow-md transition-shadow">
-                <CardContent className="pt-6 pb-6 px-6">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-lg bg-primary/10 mb-4">
-                    <b.icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="font-semibold text-foreground text-lg mb-2">{b.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{b.description}</p>
-                </CardContent>
-              </Card>
+              <div key={b.title} className="bg-white rounded-3xl p-8 shadow-sm">
+                <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-primary/10 mb-5">
+                  <b.icon className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="font-semibold text-[#1d1d1f] text-xl mb-3">{b.title}</h3>
+                <p className="text-[#6e6e73] leading-relaxed">{b.description}</p>
+              </div>
             ))}
           </div>
         </div>
       </section>
 
       {/* How It Works */}
-      <section id="how-it-works" className="py-16">
-        <div className="container">
-          <h2 className="text-2xl font-semibold text-center text-foreground mb-12">
-            How it works
+      <section id="how-it-works" className="py-24">
+        <div className="container max-w-6xl">
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest text-center mb-4">How It Works</p>
+          <h2 className="text-4xl font-bold text-center text-[#1d1d1f] mb-16 tracking-tight">
+            Three steps to a complete estimate.
           </h2>
-          <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <div className="grid md:grid-cols-3 gap-12">
             {steps.map((s) => (
               <div key={s.step} className="text-center">
-                <div className="flex h-14 w-14 items-center justify-center rounded-full bg-primary text-primary-foreground font-bold text-lg mx-auto mb-4">
-                  {s.step}
-                </div>
-                <h3 className="font-semibold text-foreground text-lg mb-2">{s.title}</h3>
-                <p className="text-muted-foreground text-sm leading-relaxed">{s.description}</p>
+                <div className="text-5xl font-bold text-primary/20 mb-4">{s.step}</div>
+                <h3 className="font-semibold text-[#1d1d1f] text-xl mb-3">{s.title}</h3>
+                <p className="text-[#6e6e73] leading-relaxed">{s.description}</p>
               </div>
             ))}
           </div>
@@ -115,92 +112,89 @@ const Index = () => {
       </section>
 
       {/* Mock Preview */}
-      <section className="py-16 bg-surface">
+      <section className="py-24 bg-[#f5f5f7]">
         <div className="container max-w-4xl">
-          <h2 className="text-2xl font-semibold text-center text-foreground mb-8">
-            What your estimate looks like
+          <p className="text-sm font-semibold text-primary uppercase tracking-widest text-center mb-4">Sample Output</p>
+          <h2 className="text-4xl font-bold text-center text-[#1d1d1f] mb-12 tracking-tight">
+            What your estimate looks like.
           </h2>
-          <Card className="bg-card border shadow-lg overflow-hidden">
-            <CardContent className="p-6">
-              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
-                {[
-                  { label: "Engineering Hours", value: "340 hrs" },
-                  { label: "Lead Time", value: "12 weeks" },
-                  { label: "Total Cost", value: "$87,500" },
-                  { label: "Confidence", value: "Medium-High" },
-                ].map((m) => (
-                  <div key={m.label} className="rounded-lg bg-surface p-4 text-center">
-                    <p className="text-xs text-muted-foreground uppercase tracking-wide mb-1">{m.label}</p>
-                    <p className="text-xl font-bold text-foreground">{m.value}</p>
-                  </div>
-                ))}
-              </div>
-              <div className="grid md:grid-cols-2 gap-4">
-                <div className="rounded-lg bg-surface p-4">
-                  <p className="text-sm font-medium text-foreground mb-3">Cost Breakdown</p>
-                  <div className="space-y-2">
-                    {[
-                      { label: "Engineering Labor", pct: 55 },
-                      { label: "Materials & Components", pct: 25 },
-                      { label: "Contingency", pct: 12 },
-                      { label: "Project Management", pct: 8 },
-                    ].map((item) => (
-                      <div key={item.label}>
-                        <div className="flex justify-between text-xs mb-1">
-                          <span className="text-muted-foreground">{item.label}</span>
-                          <span className="text-foreground font-medium">{item.pct}%</span>
-                        </div>
-                        <div className="h-2 rounded-full bg-border">
-                          <div className="h-2 rounded-full bg-primary" style={{ width: `${item.pct}%` }} />
-                        </div>
+          <div className="bg-white rounded-3xl shadow-sm overflow-hidden p-8">
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+              {[
+                { label: "Engineering Hours", value: "340 hrs" },
+                { label: "Lead Time", value: "12 weeks" },
+                { label: "Total Cost", value: "$87,500" },
+                { label: "Confidence", value: "Medium-High" },
+              ].map((m) => (
+                <div key={m.label} className="rounded-2xl bg-[#f5f5f7] p-4 text-center">
+                  <p className="text-xs text-[#6e6e73] uppercase tracking-wide mb-1">{m.label}</p>
+                  <p className="text-xl font-bold text-[#1d1d1f]">{m.value}</p>
+                </div>
+              ))}
+            </div>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="rounded-2xl bg-[#f5f5f7] p-6">
+                <p className="text-sm font-semibold text-[#1d1d1f] mb-4">Cost Breakdown</p>
+                <div className="space-y-3">
+                  {[
+                    { label: "Engineering Labor", pct: 55 },
+                    { label: "Materials & Components", pct: 25 },
+                    { label: "Contingency", pct: 12 },
+                    { label: "Project Management", pct: 8 },
+                  ].map((item) => (
+                    <div key={item.label}>
+                      <div className="flex justify-between text-sm mb-1">
+                        <span className="text-[#6e6e73]">{item.label}</span>
+                        <span className="text-[#1d1d1f] font-medium">{item.pct}%</span>
                       </div>
-                    ))}
-                  </div>
-                </div>
-                <div className="rounded-lg bg-surface p-4">
-                  <p className="text-sm font-medium text-foreground mb-3">Risk Flags</p>
-                  <ul className="space-y-2 text-sm text-muted-foreground">
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-warning flex-shrink-0" />
-                      Tight tolerances may increase revision cycles
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-warning flex-shrink-0" />
-                      No similar past project found for benchmarking
-                    </li>
-                    <li className="flex items-start gap-2">
-                      <span className="mt-1 h-2 w-2 rounded-full bg-success flex-shrink-0" />
-                      Standard parts reuse is high — reduces lead time
-                    </li>
-                  </ul>
+                      <div className="h-1.5 rounded-full bg-gray-200">
+                        <div className="h-1.5 rounded-full bg-primary" style={{ width: `${item.pct}%` }} />
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </div>
-            </CardContent>
-          </Card>
+              <div className="rounded-2xl bg-[#f5f5f7] p-6">
+                <p className="text-sm font-semibold text-[#1d1d1f] mb-4">Risk Flags</p>
+                <ul className="space-y-3 text-sm text-[#6e6e73]">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-amber-400 flex-shrink-0" />
+                    Tight tolerances may increase revision cycles
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-amber-400 flex-shrink-0" />
+                    No similar past project found for benchmarking
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1.5 h-2 w-2 rounded-full bg-green-400 flex-shrink-0" />
+                    Standard parts reuse is high — reduces lead time
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
       {/* CTA */}
-      <section className="py-16">
-        <div className="container max-w-2xl text-center">
-          <h2 className="text-2xl font-semibold text-foreground mb-4">
-            Ready to streamline your quoting process?
-          </h2>
-          <p className="text-muted-foreground mb-8">
-            Create your first structured estimate in under 10 minutes.
-          </p>
-          <Link to="/estimate">
-            <Button variant="hero" size="lg" className="text-base px-8 py-6">
-              Start an Estimate
-            </Button>
-          </Link>
-        </div>
+      <section className="py-28 text-center px-6">
+        <h2 className="text-4xl lg:text-5xl font-bold text-[#1d1d1f] mb-4 tracking-tight">
+          Ready to streamline your quoting?
+        </h2>
+        <p className="text-xl text-[#6e6e73] mb-10">
+          Create your first structured estimate in under 10 minutes.
+        </p>
+        <Link to="/estimate">
+          <button className="rounded-full bg-primary text-white text-lg font-medium px-10 py-4 hover:bg-blue-700 transition-colors">
+            Start an Estimate
+          </button>
+        </Link>
       </section>
 
       {/* Footer */}
       <footer className="border-t py-8">
-        <div className="container text-center text-sm text-muted-foreground">
-          © 2026 Fixture Estimate Assistant. All rights reserved.
+        <div className="container text-center text-sm text-[#6e6e73]">
+          © 2026 PricingPro. All rights reserved.
         </div>
       </footer>
     </div>
