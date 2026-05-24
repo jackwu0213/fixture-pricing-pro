@@ -15,7 +15,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/fixture-pricing-pro/">
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/estimate" element={<EstimateWorkflow />} />
